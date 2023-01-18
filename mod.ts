@@ -39,10 +39,10 @@ export async function generate({
     });
     const declarations = new Map<Path, Content>();
 
-    for await (const iterator of walk(`./${tempFolder}/declaration/types`)) {
+    for await (const iterator of walk(`./${tempFolder}/types`)) {
         if (iterator.name.startsWith("_") || !iterator.name.endsWith(".d.ts")) continue;
 
-        const key = iterator.path.replace(`${tempFolder}/declaration/types/`, "");
+        const key = iterator.path.replace(`${tempFolder}/types/`, "");
 
         // I don't know why dnt does this. Sure its a bug. Keep in mind when updating dnt.
         const value = Deno.readTextFileSync(iterator.path)
