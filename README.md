@@ -7,7 +7,7 @@ By current implmentation this will create a temp folder while using dnt.
 ## Usage
 
 ```ts
-import * as dts_typing_export from "https://deno.land/x/dts_typing_export/mod.ts";
+import * as dts_typing_export from "https://deno.land/x/dts_types_export/mod.ts";
 
 await dts_typing_export.generate();
 ```

@@ -5,8 +5,8 @@ export type Options = {
     /**
      * Used by dnt. Gets removed when done.
      */
-    tempFolder: string,
-    source: string | string[];
+    tempFolder?: string,
+    source?: string | string[];
     /**
      * Path or url to import map. (Usefull when having bad imports. like css imports or other non valid web imports to point to an empty javascript file)
      */
@@ -20,7 +20,7 @@ export async function generate({
     tempFolder = "dts_typing_export/declaration",
     source = "./mod.ts",
     importMap
-}: Options) {
+}: Options = {}) {
     await build({
         packageManager: "true",
         test: false,
