@@ -17,7 +17,7 @@ export type Path = string;
 export type Content = string;
 
 export async function generate({
-    tempFolder = "dts_typing_export/declaration",
+    tempFolder = "dts_typing_export",
     source = "./mod.ts",
     importMap
 }: Options = {}) {
